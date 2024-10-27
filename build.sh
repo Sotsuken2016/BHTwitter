@@ -23,6 +23,7 @@ while :; do
         echo -e '\033[1m\033[32mBuilding the IPA.\033[0m'
         cyan -i packages/com.atebits.Tweetie2.ipa -o packages/BHTwitter-sideloaded --ignore-encrypted \
           -k packages/twitter_icon.png \
+          -n Twitter \
           -uwf .theos/obj/debug/keychainfix.dylib .theos/obj/debug/libbhFLEX.dylib \
           .theos/obj/debug/BHTwitter.dylib layout/Library/Application\ Support/BHT/BHTwitter.bundle
 
