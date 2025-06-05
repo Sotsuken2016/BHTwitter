@@ -79,7 +79,9 @@ jobs:
 
       - name: Install cyan
         if: inputs.deploy_format == 'sideloaded' || inputs.deploy_format == 'trollstore'
-        run: pip install https://github.com/asdfzxcvbn/pyzule-rw/archive/main.zip
+        run: | 
+          pipx install --force https://github.com/asdfzxcvbn/pyzule-rw/archive/main.zip
+          pipx inject cyan Pillow
 
       - name: iOS SDK Caching
         id: SDK
